@@ -1,0 +1,7 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\numberline {1}Introduzione}{2}{}%
+\contentsline {section}{\numberline {2}Alberi Binari di Ricerca}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Cos'è un albero binario di Ricerca?}{2}{}%
+\contentsline {section}{\numberline {3}Contenuto}{2}{}%
+\contentsline {section}{\numberline {4}Immagini}{3}{}%
