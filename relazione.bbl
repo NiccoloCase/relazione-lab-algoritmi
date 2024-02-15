@@ -21,24 +21,21 @@
   \datalist[entry]{nty/global//global/global}
     \entry{cormen2023}{book}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=835b8c52757d98c15859b416316d9820}{%
+        {{hash=835b8c52757d98c15859b416316d9820}{%
            family={Cormen},
            familyi={C\bibinitperiod},
            given={Thomas\bibnamedelima H.},
-           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a389dea91a76366c4b4af5f52a928a76}{%
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=a389dea91a76366c4b4af5f52a928a76}{%
            family={Leiserson},
            familyi={L\bibinitperiod},
            given={Charles\bibnamedelima E.},
-           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3a964821f97ee17f8bb285bc61c52899}{%
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=3a964821f97ee17f8bb285bc61c52899}{%
            family={Rivest},
            familyi={R\bibinitperiod},
            given={Ronald\bibnamedelima L.},
-           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=0}}%
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {McGraw-Hill Education}%
@@ -51,8 +48,6 @@
       \strng{authorfullhash}{d2c07e146f5481a70a069bf45ff0f97d}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Introduzione agli algoritmi e strutture dati}

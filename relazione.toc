@@ -1,7 +1,15 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
 \contentsline {section}{\numberline {1}Introduzione}{2}{}%
-\contentsline {section}{\numberline {2}Alberi Binari di Ricerca}{2}{}%
+\contentsline {section}{\numberline {2}Cenni sugli Alberi Binari di Ricerca}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Cos'è un albero binario di Ricerca?}{2}{}%
-\contentsline {section}{\numberline {3}Contenuto}{2}{}%
-\contentsline {section}{\numberline {4}Immagini}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Implementazione in Python}{3}{}%
+\contentsline {section}{\numberline {3}Il Problema delle Chiavi Duplicate}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Implementazione "normale"}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Metodo del Falg Booleano}{5}{}%
+\contentsline {subsection}{\numberline {3.3}Metodo della Lista Concatenata}{5}{}%
+\contentsline {section}{\numberline {4}Test delle prestazioni}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Analisi Teorica}{5}{}%
+\contentsline {subsection}{\numberline {4.2}Risultati Sperimentali}{5}{}%
+\contentsline {section}{Nota sulle Caratteristiche del Computer}{6}{}%
+\contentsline {section}{Bibliografia}{6}{}%
