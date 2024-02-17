@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.17)  15 FEB 2024 17:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.17)  17 FEB 2024 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1009,21 +1009,37 @@ c} <./images/bst-generic.png>]
 <./images/bst-normal-img1.png, id=37, 462.528pt x 346.896pt>
 File: ./images/bst-normal-img1.png Graphic file (type png)
 <use ./images/bst-normal-img1.png>
-Package pdftex.def Info: ./images/bst-normal-img1.png  used on input line 279.
+Package pdftex.def Info: ./images/bst-normal-img1.png  used on input line 280.
 (pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
 <./images/bst-normal-img2.png, id=38, 462.528pt x 346.896pt>
 File: ./images/bst-normal-img2.png Graphic file (type png)
 <use ./images/bst-normal-img2.png>
-Package pdftex.def Info: ./images/bst-normal-img2.png  used on input line 285.
+Package pdftex.def Info: ./images/bst-normal-img2.png  used on input line 286.
 (pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
 
-Overfull \hbox (14.2845pt too wide) in paragraph at lines 293--298
+Overfull \hbox (14.2845pt too wide) in paragraph at lines 294--299
 []\T1/cmr/m/n/10 Nella Fi-gu-ra 2 pos-sia-mo ve-de-re l'al-be-ro de-ri-van-te d
 al-l'in-se-ri-men-to or-di-na-to dei se-guen-ti ele-men-ti $[]$.
  []
 
-[5 <./images/bst-normal-img1.png> <./images/bst-normal-img2.png>] [6]
-(./relazione.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--299
+
+ []
+
+<./images/bst-normal-img3.png, id=39, 968.418pt x 573.8238pt>
+File: ./images/bst-normal-img3.png Graphic file (type png)
+<use ./images/bst-normal-img3.png>
+Package pdftex.def Info: ./images/bst-normal-img3.png  used on input line 305.
+(pdftex.def)             Requested size: 338.58632pt x 200.62244pt.
+[5 <./images/bst-normal-img1.png> <./images/bst-normal-img2.png>]
+<./images/bst-flag.png, id=46, 462.528pt x 346.896pt>
+File: ./images/bst-flag.png Graphic file (type png)
+<use ./images/bst-flag.png>
+Package pdftex.def Info: ./images/bst-flag.png  used on input line 323.
+(pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
+ [6 <./images/bst-normal-img3.png> <./images/bst-flag.png>] [7] [8] (./relazion
+e.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1032,13 +1048,13 @@ Package logreq Info: Writing requests to 'relazione.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28163 strings out of 476025
- 556584 string characters out of 5790017
+ 28197 strings out of 476025
+ 557404 string characters out of 5790017
  1895388 words of memory out of 5000000
- 48250 multiletter control sequences out of 15000+600000
- 522361 words of font info for 53 fonts, out of 8000000 for 9000
+ 48281 multiletter control sequences out of 15000+600000
+ 522738 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,12n,89p,682b,1995s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,12n,89p,682b,1993s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
@@ -1050,10 +1066,10 @@ al/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local
 /texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/t
 exlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/tex
 live/2023/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on relazione.pdf (7 pages, 410517 bytes).
+Output written on relazione.pdf (9 pages, 475295 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 113 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -150,7 +150,7 @@ Come già accennato possiamo rappresentare un albero binario con l'ausilio delle
 
 \vspace{5pt}
 
-\begin{lstlisting}[language=Python, caption={Implementazione di un BST}, label=yourlabel]
+\begin{lstlisting}[language=Python, caption={Implementazione di un BST}, label=bst-implementation]
 
 
 class Node:
@@ -259,7 +259,8 @@ Possiamo quindi riformulare la relazione tra i nodi di un BST affinché supporti
 \label{prop:bst-normal-implementation-prop}
 
 Questa modifica comporta quindi un cambiamento dell'implementazione dell'inserimento nella classe BST: al momento dell'inserimento i nodi con stessa chiave vengono inseriti come figli sinistri del primo nodo con tale chiave (e così via ricorsivamente). Aggiustiamo quindi il codice.
-\begin{lstlisting}[language=Python, caption={Funzione ausiliaria di inserimento aggiornata}, label=tree-plot]
+
+\begin{lstlisting}[language=Python, caption={Funzione ausiliaria di inserimento aggiornata}]
     def _insertNode(self, currentNode, key):
         if (key <= currentNode.key):
             if (currentNode.left):
@@ -294,15 +295,77 @@ Nella \cref{fig:bst-normal-img1} possiamo vedere l'albero derivante dall'inserim
 \\
 Non bisogna però cadere nella convinzione che nodi con stessa chiave si trovino sempre tutti adiacenti l'uno con l'altro.
 A questo scopo si consideri la \cref{fig:bst-normal-img2}:  cambiando semplicemente l'ordine di inserimento dei valori della figura precedente (ora \(\mathbf{\{3, 2, 2, 1, 2, 4\}}\)) il risultato è molto diverso; tra il penultimo e l'ultimo nodo con chiave 2 vi è in mezzo un nodo con chiave 1!
-Questo può portare a complicazioni nella ricerca, che verrà affrontata in seguito. 
+Questo può portare a complicazioni nella ricerca, che verrà affrontata in seguito. \\
+
+Il principale svantaggio di questa implementazione è che l'inserimento di tante chiavi uguali può tendere a sbilanciare l'albero il quale finisce per degenerare in una semplice lista. Infatti, è evidente che per creare l'albero di N elementi più sbilanciato possibile sia sufficiente inserire N volte la stessa chiave. Come in esempio (\cref{fig:bst-normal-img3}).
 
 
-
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{./images/bst-normal-img3}
+  \caption{Esempio di albero binario di ricerca sbilanciato}
+  \label{fig:bst-normal-img3}
+\end{figure}
 
 
 
 \subsection{Metodo del Falg Booleano}
 \label{subsec:fag-implementation}
+
+Un altro possibile approccio al caso delle chiavi duplicate è, invece di inserire sempre i nodi con chiave duplicate a sinistra del nodo padre, inserire i nodi con chiave duplicate a sinistra o destra del padre a seconda di un flag booleano. Più nello specifico: estendiamo la struttura dati di ogni nodo dell'albero così che il generico nodo x abbia un nuovo attributo \textit{x.flag} e quindi, durante l'inserimento, porre x a \textit{x.left} o \textit{x.right} a seconda del valore del flag, il quale viene alternato a ogni visita di x con chiave uguale. 
+
+Il punto di forza di questa implementazione è il fatto che tende a preservare il bilanciamento dell'albero anche in presenza di molte chiavi duplicate, a differenza del primo approccio (Vedi \ref{subsec:normal-implementation}). Ciò risulta evidente se si prova a disegnare l'albero risultante dall'inserimento di N chiavi uguali (Vedi \cref{fig:bst-flag}).
+
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{./images/bst-flag}
+  \caption{BST con Flag Booleano di 64 chiavi uguali}
+  \label{fig:bst-flag}
+\end{figure}
+
+
+
+Per quanto riguarda il codice, le modifiche da apportare sono minime.
+Aggiungiamo il nuovo attributo nella classe Nodo:
+
+\begin{lstlisting}[language=Python]
+class Node:
+    def __init__(self, key):
+        self.key = key
+        self.left = None
+        self.right = None
+        self.flag = False # <---
+\end{lstlisting}
+
+E aggiorniamo la funzione di supporto per l'inserimento:
+
+\begin{lstlisting}[language=Python]
+    def _insertNode(self, currentNode, key):        
+        if(currentNode.key == key):
+            if(currentNode.flag): self._insert_right(currentNode, key)
+            else: self._insert_left(currentNode, key)
+            currentNode.flag = not currentNode.flag # Alterna il flag
+    
+        if (key < currentNode.key): self._insert_left (currentNode, key)
+        elif (key > currentNode.key): self._insert_right(currentNode, key)
+
+    # Funzione di supporto per l'inserimento di un nodo a sinistra
+    def _insert_left(self, currentNode, key):
+        if (currentNode.left): self._insertNode(currentNode.left, key)
+        else: currentNode.left = Node(key)
+
+    # Funzione di supporto per l'inserimento di un nodo a destra
+    def _insert_right(self, currentNode, key):
+        if (currentNode.right): self._insertNode(currentNode.right, key)
+        else: currentNode.right = Node(key)
+\end{lstlisting}
+
+
+
+
+
 
 
 
@@ -324,7 +387,18 @@ Questo può portare a complicazioni nella ricerca, che verrà affrontata in segu
 \section*{Nota sui test}
 \addcontentsline{toc}{section}{Nota sulle Caratteristiche del Computer}
 
-Si tenga presente che tutti i test presenti in tale relazione sono stati eseguiti su un calcolatore con le seguenti specifiche:
+
+Si tenga presente svolgere i test discussi è necessario alzare il limite massimo di ricorsione di default di Python. Questo è necessario per prevenire che l'interprete blocchi l'esecuzione di un elevato numero di chiamate ricorsive, però necessarie in questa tipologia di test.
+Per fare ciò basta impostare un nuovo limite nel seguente modo:
+\begin{lstlisting}[language=Python]
+sys.setrecursionlimit(500000000)
+\end{lstlisting}
+
+
+\vspace{20pt}
+
+
+Si tenga inoltre presente che tutti i test presenti in tale relazione sono stati eseguiti su un calcolatore con le seguenti specifiche:
 
 \begin{multicols}{2}
     \textbf{Hardware:}
