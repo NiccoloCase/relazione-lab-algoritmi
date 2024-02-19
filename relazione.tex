@@ -32,6 +32,7 @@
 \Crefname{figure}{Figura}{Figure}
 
 
+
 % Configurazione label immagini
 \DeclareCaptionLabelFormat{myformat}{#1~#2}
 \captionsetup[figure]{labelformat=myformat}
@@ -195,7 +196,7 @@ Come già sottolineato (Vedi \ref{subsec:bst-introduction}) il vantaggio di ques
 Questo aspetto è fondamentale poiché spiega l'esigenza, su cui torneremo, di avere alberi il più possibili bilanciati. \\
 È infine degna di nota la funzione ricorsiva usata nella relazione per la rappresentazione grafica dei BST.
 
-\begin{lstlisting}[language=Python, caption={Rappresentazione Grfaica di un BST}, label=tree-plot]
+\begin{lstlisting}[language=Python, caption={Rappresentazione Grfaica di un BST}, label={lst:plot_tree}]
 def plot_tree(tree):
     fig, ax = plt.subplots()
     _plot_tree(ax, tree.root, x=0, y=0, level=1)
@@ -330,7 +331,7 @@ Il punto di forza di questa implementazione è il fatto che tende a preservare i
 Per quanto riguarda il codice, le modifiche da apportare sono minime.
 Aggiungiamo il nuovo attributo nella classe Nodo:
 
-\begin{lstlisting}[language=Python]
+\begin{lstlisting}[language=Python, caption={Classe nodo di un BST con Flag Booleano}]
 class Node:
     def __init__(self, key):
         self.key = key
@@ -375,12 +376,85 @@ E aggiorniamo la funzione di supporto per l'inserimento:
 \subsection{Metodo della Lista Concatenata}
 \label{subsec:list-implementation}
 
+\begin{figure}[htbp]
+  \begin{minipage}{0.48\textwidth}  % Riduci la larghezza della prima minipage
+    \centering
+    \includegraphics[width=\linewidth]{./images/bst-list-img1}
+    \caption{BST con gestione chiavi duplicate tramite lista concatenata}
+    \label{fig:bst-list-img1}
+  \end{minipage}%
+  \hfill  % Aggiungi uno spazio orizzontale tra le due colonne
+  \begin{minipage}{0.48\textwidth}  % Riduci la larghezza della seconda minipage
+    \centering
+    \includegraphics[width=\linewidth]{./images/bst-list-img2}
+    \caption{BST con lista concatenata di 100 chiavi uguali}
+    \label{fig:bst-list-img2}
+  \end{minipage}
+\end{figure}
+
+
+
+L'ultimo approccio possibile trattato in questa relazione è quello  della lista concatenata: inseriamo tutti i nodi con chiave uguale in una lista concatenata.
+Una possibile implementazione nel codice è di estendere la classe Nodo con un puntatore \textit{next} al prossimo elemento della lista concatenata. Nel mio caso ho aggiunto anche un capo   \textit{duplicates} che, nel primo nodo, tiene il conteggio dei nodi con chiave duplicata per esigenze rappresentative.
+
+\begin{lstlisting}[language=Python, caption={Classe Nodo di un BST con lista concatenata}]
+class Node:
+    def __init__(self, key):
+        self.key = key
+        self.left = None
+        self.right = None
+        self.next = None # <---
+        self.duplicates = 0 # <---
+\end{lstlisting}
+
+A questo punto, in fase di inserimento, se si trova un nodo con stessa chiave già esistente basta inserire il nuovo nodo.
+
+\begin{lstlisting}[language=Python, caption={Gestione chiavi duplicate con lista concatenata}]
+     if (key == currentNode.key):
+            newNode = Node(key)
+            newNode.next = currentNode.next
+            currentNode.next = newNode
+            currentNode.duplicates += 1
+
+\end{lstlisting}
+
+\vspace{20px}
+
+Apportando una semplice modifica alla funzione \textit{plot\_tree} (Vedi codice~\ref{lst:plot_tree}) possiamo visualizzare questo approccio in Figura \ref{fig:bst-list-img1} e Figura \ref{fig:bst-list-img2}.
+Per ogni nodo è segnato tra parentesi il numero di occorrenze di quella chiave.
 
 
 
 \section{Test delle prestazioni}
+Entriamo ora nel dettaglio sulle prestazioni di queste tre possibili implementazioni.
+Esaminiamo quindi il problema dell'inserimento di n chiavi identiche all'interno di un BST inizialmente vuoto e l'operazione di ricerca. 
+
 \subsection{Analisi Teorica}
+
+Come già discusso nel paragrafo \ref{subsec:normal-implementation} l'implementazione senza particolari accorgimenti ha il problema della degenerazione dell'albero in una lista del caso di un elevato numero di inserimento con stessa chiave.
+La teoria ci dice infatti che l'inserimento in un albero di ricerca è un operazione che richiede $O(h)$; tuttavia, come immaginabile dalla \cref{fig:bst-normal-img3}, nell'inserimento di n chiavi identiche si deve ogni volta arrivare in fondo all'albero di altezza $h=n$. Ne consegue che ci si aspetta un comportamento lineare $\Theta(n)$.
+\\
+Il secondo approccio (Paragrafo \ref{subsec:fag-implementation}) evita questa problematica e cerca di preservare il bilanciamento dell'albero. L'altezza diventa quindi funzione logaritmica e la complessità  per l'inserimento $\Theta(log(n))$.
+\\
+Infine per quanto riguarda l'inserimento con l'approccio tramite lista concatenata (Vedi \ref{subsec:list-implementation}) sappiamo che una volta trovato il primo nodo con chiave uguale, l'inserimento in testa alla lista concatenata è un'operazione $\Theta(1)$; dobbiamo però prima trovare tale nodo, il quale può anche non esistere. Abbiamo allora $O(h) + \Theta(1) = O(h)$. 
+Tuttavia, nel caso del test di inserimento di n chiavi uguali l'albero degenera in un singolo nodo (Vedi Figura \ref{fig:bst-list-img2}) e quindi la complessità risultante diventa $\Theta(1) + \Theta(1) = \Theta(1)$.
+
+
+
+
+
 \subsection{Risultati Sperimentali}
+
+
+
+
+
+
+
+
+
+
+
 \newpage
 
 % PC 

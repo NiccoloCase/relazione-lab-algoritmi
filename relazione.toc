@@ -8,8 +8,8 @@
 \contentsline {subsection}{\numberline {3.1}Implementazione "normale"}{4}{}%
 \contentsline {subsection}{\numberline {3.2}Metodo del Falg Booleano}{6}{}%
 \contentsline {subsection}{\numberline {3.3}Metodo della Lista Concatenata}{7}{}%
-\contentsline {section}{\numberline {4}Test delle prestazioni}{7}{}%
-\contentsline {subsection}{\numberline {4.1}Analisi Teorica}{7}{}%
-\contentsline {subsection}{\numberline {4.2}Risultati Sperimentali}{7}{}%
-\contentsline {section}{Nota sulle Caratteristiche del Computer}{8}{}%
-\contentsline {section}{Bibliografia}{8}{}%
+\contentsline {section}{\numberline {4}Test delle prestazioni}{8}{}%
+\contentsline {subsection}{\numberline {4.1}Analisi Teorica}{8}{}%
+\contentsline {subsection}{\numberline {4.2}Risultati Sperimentali}{8}{}%
+\contentsline {section}{Nota sulle Caratteristiche del Computer}{9}{}%
+\contentsline {section}{Bibliografia}{9}{}%
