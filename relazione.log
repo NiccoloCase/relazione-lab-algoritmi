@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.17)  19 FEB 2024 14:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.17)  23 FEB 2024 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -282,25 +282,64 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \colbreak@box=\box99
 \mc@col@check@num=\count286
 )
+(/usr/local/texlive/2023/texmf-dist/tex/latex/csvsimple/csvsimple.sty
+Package: csvsimple 2022/09/20 v2.3.2 LaTeX CSV file processing
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/csvsimple/csvsimple-legacy.sty
+Package: csvsimple-legacy 2022/09/20 version 2.3.2 LaTeX2e CSV file processing
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks23
+\pgfutil@tempdima=\dimen174
+\pgfutil@tempdimb=\dimen175
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box100
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks24
+\pgfkeys@temptoks=\toks25
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex
+\pgfkeys@tmptoks=\toks26
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+\csv@file=\read3
+\c@csvinputline=\count287
+\c@csvrow=\count288
+\c@csvcol=\count289
+\csv@out=\write3
+)
 (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count287
-\lst@gtempboxa=\box100
-\lst@token=\toks23
-\lst@length=\count288
-\lst@currlwidth=\dimen174
-\lst@column=\count289
-\lst@pos=\count290
-\lst@lostspace=\dimen175
-\lst@width=\dimen176
-\lst@newlines=\count291
-\lst@lineno=\count292
-\lst@maxwidth=\dimen177
+\lst@mode=\count290
+\lst@gtempboxa=\box101
+\lst@token=\toks27
+\lst@length=\count291
+\lst@currlwidth=\dimen176
+\lst@column=\count292
+\lst@pos=\count293
+\lst@lostspace=\dimen177
+\lst@width=\dimen178
+\lst@newlines=\count294
+\lst@lineno=\count295
+\lst@maxwidth=\dimen179
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count293
-\lst@skipnumbers=\count294
-\lst@framebox=\box101
+\c@lstnumber=\count296
+\lst@skipnumbers=\count297
+\lst@framebox=\box102
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
@@ -312,13 +351,13 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
-\csq@reset=\count295
-\csq@gtype=\count296
-\csq@glevel=\count297
-\csq@qlevel=\count298
-\csq@maxlvl=\count299
-\csq@tshold=\count300
-\csq@ltx@everypar=\toks24
+\csq@reset=\count298
+\csq@gtype=\count299
+\csq@glevel=\count300
+\csq@qlevel=\count301
+\csq@maxlvl=\count302
+\csq@tshold=\count303
+\csq@ltx@everypar=\toks28
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
@@ -354,61 +393,58 @@ Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
 (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count301
+\lrq@indent=\count304
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-)
 (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count302
-\c@listtotal=\count303
-\c@listcount=\count304
-\c@liststart=\count305
-\c@liststop=\count306
-\c@citecount=\count307
-\c@citetotal=\count308
-\c@multicitecount=\count309
-\c@multicitetotal=\count310
-\c@instcount=\count311
-\c@maxnames=\count312
-\c@minnames=\count313
-\c@maxitems=\count314
-\c@minitems=\count315
-\c@citecounter=\count316
-\c@maxcitecounter=\count317
-\c@savedcitecounter=\count318
-\c@uniquelist=\count319
-\c@uniquename=\count320
-\c@refsection=\count321
-\c@refsegment=\count322
-\c@maxextratitle=\count323
-\c@maxextratitleyear=\count324
-\c@maxextraname=\count325
-\c@maxextradate=\count326
-\c@maxextraalpha=\count327
-\c@abbrvpenalty=\count328
-\c@highnamepenalty=\count329
-\c@lownamepenalty=\count330
-\c@maxparens=\count331
-\c@parenlevel=\count332
-\blx@tempcnta=\count333
-\blx@tempcntb=\count334
-\blx@tempcntc=\count335
-\c@blx@maxsection=\count336
-\blx@maxsegment@0=\count337
-\blx@notetype=\count338
-\blx@parenlevel@text=\count339
-\blx@parenlevel@foot=\count340
-\blx@sectionciteorder@0=\count341
-\blx@sectionciteorderinternal@0=\count342
-\blx@entrysetcounter=\count343
-\blx@biblioinstance=\count344
+\c@tabx@nest=\count305
+\c@listtotal=\count306
+\c@listcount=\count307
+\c@liststart=\count308
+\c@liststop=\count309
+\c@citecount=\count310
+\c@citetotal=\count311
+\c@multicitecount=\count312
+\c@multicitetotal=\count313
+\c@instcount=\count314
+\c@maxnames=\count315
+\c@minnames=\count316
+\c@maxitems=\count317
+\c@minitems=\count318
+\c@citecounter=\count319
+\c@maxcitecounter=\count320
+\c@savedcitecounter=\count321
+\c@uniquelist=\count322
+\c@uniquename=\count323
+\c@refsection=\count324
+\c@refsegment=\count325
+\c@maxextratitle=\count326
+\c@maxextratitleyear=\count327
+\c@maxextraname=\count328
+\c@maxextradate=\count329
+\c@maxextraalpha=\count330
+\c@abbrvpenalty=\count331
+\c@highnamepenalty=\count332
+\c@lownamepenalty=\count333
+\c@maxparens=\count334
+\c@parenlevel=\count335
+\blx@tempcnta=\count336
+\blx@tempcntb=\count337
+\blx@tempcntc=\count338
+\c@blx@maxsection=\count339
+\blx@maxsegment@0=\count340
+\blx@notetype=\count341
+\blx@parenlevel@text=\count342
+\blx@parenlevel@foot=\count343
+\blx@sectionciteorder@0=\count344
+\blx@sectionciteorderinternal@0=\count345
+\blx@entrysetcounter=\count346
+\blx@biblioinstance=\count347
 \labelnumberwidth=\skip97
 \labelalphawidth=\skip98
 \biblabelsep=\skip99
@@ -417,12 +453,12 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibinitsep=\skip102
 \bibparsep=\skip103
 \bibhang=\skip104
-\blx@bcfin=\read3
-\blx@bcfout=\write3
+\blx@bcfin=\read4
+\blx@bcfout=\write4
 \blx@langwohyphens=\language88
-\c@mincomprange=\count345
-\c@maxcomprange=\count346
-\c@mincompwidth=\count347
+\c@mincomprange=\count348
+\c@maxcomprange=\count349
+\c@mincompwidth=\count350
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -433,74 +469,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'verbose.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count348
-\c@savedafterword=\count349
-\c@annotator=\count350
-\c@savedannotator=\count351
-\c@author=\count352
-\c@savedauthor=\count353
-\c@bookauthor=\count354
-\c@savedbookauthor=\count355
-\c@commentator=\count356
-\c@savedcommentator=\count357
-\c@editor=\count358
-\c@savededitor=\count359
-\c@editora=\count360
-\c@savededitora=\count361
-\c@editorb=\count362
-\c@savededitorb=\count363
-\c@editorc=\count364
-\c@savededitorc=\count365
-\c@foreword=\count366
-\c@savedforeword=\count367
-\c@holder=\count368
-\c@savedholder=\count369
-\c@introduction=\count370
-\c@savedintroduction=\count371
-\c@namea=\count372
-\c@savednamea=\count373
-\c@nameb=\count374
-\c@savednameb=\count375
-\c@namec=\count376
-\c@savednamec=\count377
-\c@translator=\count378
-\c@savedtranslator=\count379
-\c@shortauthor=\count380
-\c@savedshortauthor=\count381
-\c@shorteditor=\count382
-\c@savedshorteditor=\count383
-\c@labelname=\count384
-\c@savedlabelname=\count385
-\c@institution=\count386
-\c@savedinstitution=\count387
-\c@lista=\count388
-\c@savedlista=\count389
-\c@listb=\count390
-\c@savedlistb=\count391
-\c@listc=\count392
-\c@savedlistc=\count393
-\c@listd=\count394
-\c@savedlistd=\count395
-\c@liste=\count396
-\c@savedliste=\count397
-\c@listf=\count398
-\c@savedlistf=\count399
-\c@location=\count400
-\c@savedlocation=\count401
-\c@organization=\count402
-\c@savedorganization=\count403
-\c@origlocation=\count404
-\c@savedoriglocation=\count405
-\c@origpublisher=\count406
-\c@savedorigpublisher=\count407
-\c@publisher=\count408
-\c@savedpublisher=\count409
-\c@language=\count410
-\c@savedlanguage=\count411
-\c@origlanguage=\count412
-\c@savedoriglanguage=\count413
-\c@pageref=\count414
-\c@savedpageref=\count415
+\c@afterword=\count351
+\c@savedafterword=\count352
+\c@annotator=\count353
+\c@savedannotator=\count354
+\c@author=\count355
+\c@savedauthor=\count356
+\c@bookauthor=\count357
+\c@savedbookauthor=\count358
+\c@commentator=\count359
+\c@savedcommentator=\count360
+\c@editor=\count361
+\c@savededitor=\count362
+\c@editora=\count363
+\c@savededitora=\count364
+\c@editorb=\count365
+\c@savededitorb=\count366
+\c@editorc=\count367
+\c@savededitorc=\count368
+\c@foreword=\count369
+\c@savedforeword=\count370
+\c@holder=\count371
+\c@savedholder=\count372
+\c@introduction=\count373
+\c@savedintroduction=\count374
+\c@namea=\count375
+\c@savednamea=\count376
+\c@nameb=\count377
+\c@savednameb=\count378
+\c@namec=\count379
+\c@savednamec=\count380
+\c@translator=\count381
+\c@savedtranslator=\count382
+\c@shortauthor=\count383
+\c@savedshortauthor=\count384
+\c@shorteditor=\count385
+\c@savedshorteditor=\count386
+\c@labelname=\count387
+\c@savedlabelname=\count388
+\c@institution=\count389
+\c@savedinstitution=\count390
+\c@lista=\count391
+\c@savedlista=\count392
+\c@listb=\count393
+\c@savedlistb=\count394
+\c@listc=\count395
+\c@savedlistc=\count396
+\c@listd=\count397
+\c@savedlistd=\count398
+\c@liste=\count399
+\c@savedliste=\count400
+\c@listf=\count401
+\c@savedlistf=\count402
+\c@location=\count403
+\c@savedlocation=\count404
+\c@organization=\count405
+\c@savedorganization=\count406
+\c@origlocation=\count407
+\c@savedoriglocation=\count408
+\c@origpublisher=\count409
+\c@savedorigpublisher=\count410
+\c@publisher=\count411
+\c@savedpublisher=\count412
+\c@language=\count413
+\c@savedlanguage=\count414
+\c@origlanguage=\count415
+\c@savedoriglanguage=\count416
+\c@pageref=\count417
+\c@savedpageref=\count418
 \shorthandwidth=\skip105
 \shortjournalwidth=\skip106
 \shortserieswidth=\skip107
@@ -526,19 +562,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count416
-\c@textcitetotal=\count417
-\c@textcitemaxnames=\count418
-\c@biburlbigbreakpenalty=\count419
-\c@biburlbreakpenalty=\count420
-\c@biburlnumpenalty=\count421
-\c@biburlucpenalty=\count422
-\c@biburllcpenalty=\count423
+\c@textcitecount=\count419
+\c@textcitetotal=\count420
+\c@textcitemaxnames=\count421
+\c@biburlbigbreakpenalty=\count422
+\c@biburlbreakpenalty=\count423
+\c@biburlnumpenalty=\count424
+\c@biburlucpenalty=\count425
+\c@biburllcpenalty=\count426
 \biburlbigskip=\muskip17
 \biburlnumskip=\muskip18
 \biburlucskip=\muskip19
 \biburllcskip=\muskip20
-\c@smartand=\count424
+\c@smartand=\count427
 )
 Package biblatex Info: Trying to load bibliography style 'verbose'...
 Package biblatex Info: ... file 'verbose.bbx' found.
@@ -555,8 +591,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count425
-\c@bbx:relatedtotal=\count426
+\c@bbx:relatedcount=\count428
+\c@bbx:relatedtotal=\count429
 )))
 Package biblatex Info: Trying to load citation style 'verbose'...
 Package biblatex Info: ... file 'verbose.cbx' found.
@@ -599,33 +635,12 @@ Package cleveref Info: no abbreviation of names on input line 7852.
 Package: tcolorbox 2023/02/12 version 6.0.1 text color boxes
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
-x
-\pgfutil@everybye=\toks25
-\pgfutil@tempdima=\dimen178
-\pgfutil@tempdimb=\dimen179
-)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box102
-) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
-))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks26
-\pgfkeys@temptoks=\toks27
-
-(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
-tered.code.tex
-\pgfkeys@tmptoks=\toks28
-))
 \pgf@x=\dimen180
 \pgf@y=\dimen181
 \pgf@xa=\dimen182
@@ -636,17 +651,16 @@ tered.code.tex
 \pgf@yc=\dimen187
 \pgf@xd=\dimen188
 \pgf@yd=\dimen189
-\w@pgf@writea=\write4
-\r@pgf@reada=\read4
-\c@pgf@counta=\count427
-\c@pgf@countb=\count428
-\c@pgf@countc=\count429
-\c@pgf@countd=\count430
+\w@pgf@writea=\write5
+\r@pgf@reada=\read5
+\c@pgf@counta=\count430
+\c@pgf@countb=\count431
+\c@pgf@countc=\count432
+\c@pgf@countd=\count433
 \t@pgf@toka=\toks29
 \t@pgf@tokb=\toks30
 \t@pgf@tokc=\toks31
-\pgf@sys@id@count=\count431
-
+\pgf@sys@id@count=\count434
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -663,8 +677,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count432
-\pgfsyssoftpath@bigbuffer@items=\count433
+\pgfsyssoftpath@smallbuffer@items=\count435
+\pgfsyssoftpath@bigbuffer@items=\count436
 )
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -694,7 +708,7 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen190
-\pgfmath@count=\count434
+\pgfmath@count=\count437
 \pgfmath@box=\box103
 \pgfmath@toks=\toks32
 \pgfmath@stack@operand=\toks33
@@ -720,7 +734,7 @@ code.tex)
 erarithmetics.code.tex)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count435
+\c@pgfmathroundto@lastzeros=\count438
 )) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
@@ -758,7 +772,7 @@ File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box104
 \pgf@hbox=\box105
 \pgf@layerbox@main=\box106
-\pgf@picture@serial@count=\count436
+\pgf@picture@serial@count=\count439
 )
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
@@ -793,8 +807,8 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 e.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen270
-\pgf@sys@shading@range@num=\count437
-\pgf@shadingcount=\count438
+\pgf@sys@shading@range@num=\count440
+\pgf@shadingcount=\count441
 )
 (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -843,7 +857,7 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks35
 \verbatim@line=\toks36
-\verbatim@in@stream=\read5
+\verbatim@in@stream=\read6
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -857,52 +871,92 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@upperbox=\box110
 \tcb@lowerbox=\box111
 \tcb@phantombox=\box112
-\c@tcbbreakpart=\count439
-\c@tcblayer=\count440
-\c@tcolorbox@number=\count441
+\c@tcbbreakpart=\count442
+\c@tcblayer=\count443
+\c@tcolorbox@number=\count444
 \tcb@temp=\box113
 \tcb@temp=\box114
 \tcb@temp=\box115
 \tcb@temp=\box116
 )
-\c@tcb@cnt@mybox=\count442
+\c@tcb@cnt@mybox=\count445
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'italian'.
 
-(./relazione.aux)
+(./relazione.aux
+
+LaTeX Warning: Label `fig:bst-normal-insetion' multiply defined.
+
+
+LaTeX Warning: Label `fig:bst-normal-insetion@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:bst-normal-insetion-iterations' multiply defined.
+
+
+LaTeX Warning: Label `fig:bst-normal-insetion-iterations@cref' multiply defined
+.
+
+
+LaTeX Warning: Label `fig:bst-normal-insetion' multiply defined.
+
+
+LaTeX Warning: Label `fig:bst-normal-insetion@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:bst-normal-insetion-iterations' multiply defined.
+
+
+LaTeX Warning: Label `fig:bst-normal-insetion-iterations@cref' multiply defined
+.
+
+
+LaTeX Warning: Label `tab:bst-flag-insertion-summarised' multiply defined.
+
+
+LaTeX Warning: Label `tab:bst-flag-insertion-summarised@cref' multiply defined.
+
+
+
+LaTeX Warning: Label `tab:bst-list-insertion-summarised' multiply defined.
+
+
+LaTeX Warning: Label `tab:bst-list-insertion-summarised@cref' multiply defined.
+
+
+)
 \openout1 = `relazione.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Info: Redefining \it@ocap on input line 84.
-LaTeX Info: Redefining \it@ccap on input line 84.
-
-(/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Info: Redefining \it@ocap on input line 86.
+LaTeX Info: Redefining \it@ccap on input line 86.
+ (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count443
+\scratchcounter=\count446
 \scratchdimen=\dimen273
 \scratchbox=\box117
-\nofMPsegments=\count444
-\nofMParguments=\count445
+\nofMPsegments=\count447
+\nofMParguments=\count448
 \everyMPshowfont=\toks38
-\MPscratchCnt=\count446
+\MPscratchCnt=\count449
 \MPscratchDim=\dimen274
-\MPnumerator=\count447
-\makeMPintoPDFobject=\count448
+\MPnumerator=\count450
+\makeMPintoPDFobject=\count451
 \everyMPtoPDFconversion=\toks39
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -950,7 +1004,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count449
+\c@lstlisting=\count452
 Package biblatex Info: Trying to load language 'italian'...
 Package biblatex Info: ... file 'italian.lbx' found.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
@@ -959,25 +1013,25 @@ File: italian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `relazione.bcf'.
+\openout4 = `relazione.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'relazione.bbl' found.
 
 (./relazione.bbl)
-Package biblatex Info: Reference section=0 on input line 84.
-Package biblatex Info: Reference segment=0 on input line 84.
+Package biblatex Info: Reference section=0 on input line 86.
+Package biblatex Info: Reference segment=0 on input line 86.
 <logo.png, id=4, 2569.6pt x 1169.36874pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 88.
+Package pdftex.def Info: logo.png  used on input line 90.
 (pdftex.def)             Requested size: 241.84843pt x 110.05627pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 88.
+(Font)              <12> on input line 90.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 88.
+(Font)              <8> on input line 90.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 88.
+(Font)              <6> on input line 90.
  [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
@@ -988,75 +1042,163 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 )
-\tf@toc=\write5
-\openout5 = `relazione.toc'.
+\tf@toc=\write6
+\openout6 = `relazione.toc'.
 
  [1]
 <./images/bst-generic.png, id=20, 462.528pt x 346.896pt>
 File: ./images/bst-generic.png Graphic file (type png)
 <use ./images/bst-generic.png>
-Package pdftex.def Info: ./images/bst-generic.png  used on input line 110.
+Package pdftex.def Info: ./images/bst-generic.png  used on input line 112.
 (pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
  [2{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
 c} <./images/bst-generic.png>]
 [3] [4]
-<./images/bst-normal-img1.png, id=37, 462.528pt x 346.896pt>
+<./images/bst-normal-img1.png, id=36, 462.528pt x 346.896pt>
 File: ./images/bst-normal-img1.png Graphic file (type png)
 <use ./images/bst-normal-img1.png>
-Package pdftex.def Info: ./images/bst-normal-img1.png  used on input line 281.
+Package pdftex.def Info: ./images/bst-normal-img1.png  used on input line 289.
 (pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
-<./images/bst-normal-img2.png, id=38, 462.528pt x 346.896pt>
+<./images/bst-normal-img2.png, id=37, 462.528pt x 346.896pt>
 File: ./images/bst-normal-img2.png Graphic file (type png)
 <use ./images/bst-normal-img2.png>
-Package pdftex.def Info: ./images/bst-normal-img2.png  used on input line 287.
+Package pdftex.def Info: ./images/bst-normal-img2.png  used on input line 295.
 (pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
 
-Overfull \hbox (14.2845pt too wide) in paragraph at lines 295--300
+Overfull \hbox (14.2845pt too wide) in paragraph at lines 303--308
 []\T1/cmr/m/n/10 Nella Fi-gu-ra 2 pos-sia-mo ve-de-re l'al-be-ro de-ri-van-te d
 al-l'in-se-ri-men-to or-di-na-to dei se-guen-ti ele-men-ti $[]$.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--300
+Underfull \hbox (badness 10000) in paragraph at lines 303--308
 
  []
 
-<./images/bst-normal-img3.png, id=39, 968.418pt x 573.8238pt>
+<./images/bst-normal-img3.png, id=38, 968.418pt x 573.8238pt>
 File: ./images/bst-normal-img3.png Graphic file (type png)
 <use ./images/bst-normal-img3.png>
-Package pdftex.def Info: ./images/bst-normal-img3.png  used on input line 306.
+Package pdftex.def Info: ./images/bst-normal-img3.png  used on input line 314.
 (pdftex.def)             Requested size: 338.58632pt x 200.62244pt.
 [5 <./images/bst-normal-img1.png> <./images/bst-normal-img2.png>]
 <./images/bst-flag.png, id=46, 462.528pt x 346.896pt>
 File: ./images/bst-flag.png Graphic file (type png)
 <use ./images/bst-flag.png>
-Package pdftex.def Info: ./images/bst-flag.png  used on input line 324.
+Package pdftex.def Info: ./images/bst-flag.png  used on input line 332.
 (pdftex.def)             Requested size: 338.58632pt x 253.95184pt.
  [6 <./images/bst-normal-img3.png> <./images/bst-flag.png>]
 <./images/bst-list-img1.png, id=53, 462.528pt x 346.896pt>
 File: ./images/bst-list-img1.png Graphic file (type png)
 <use ./images/bst-list-img1.png>
-Package pdftex.def Info: ./images/bst-list-img1.png  used on input line 382.
+Package pdftex.def Info: ./images/bst-list-img1.png  used on input line 390.
 (pdftex.def)             Requested size: 232.17242pt x 174.13039pt.
 <./images/bst-list-img2.png, id=54, 462.528pt x 346.896pt>
 File: ./images/bst-list-img2.png Graphic file (type png)
 <use ./images/bst-list-img2.png>
-Package pdftex.def Info: ./images/bst-list-img2.png  used on input line 389.
+Package pdftex.def Info: ./images/bst-list-img2.png  used on input line 397.
 (pdftex.def)             Requested size: 232.17242pt x 174.13039pt.
- [7 <./images/bst-list-img1.png> <./images/bst-list-img2.png>] [8] [9] (./relaz
-ione.aux)
+ [7 <./images/bst-list-img1.png> <./images/bst-list-img2.png>]
+<./tests_output/bst/insertion.png, id=61, 462.528pt x 346.896pt>
+File: ./tests_output/bst/insertion.png Graphic file (type png)
+<use ./tests_output/bst/insertion.png>
+Package pdftex.def Info: ./tests_output/bst/insertion.png  used on input line 4
+59.
+(pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
+<./tests_output/bst/insertion_iterations.png, id=62, 462.528pt x 346.896pt>
+File: ./tests_output/bst/insertion_iterations.png Graphic file (type png)
+<use ./tests_output/bst/insertion_iterations.png>
+Package pdftex.def Info: ./tests_output/bst/insertion_iterations.png  used on i
+nput line 465.
+(pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
+
+Overfull \hbox (2.22168pt too wide) in paragraph at lines 457--469
+[]$[]$ $[]$ 
+ []
+
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 474--493
+[][] 
+ []
+
+<./tests_output/bst_flag/insertion.png, id=63, 462.528pt x 346.896pt>
+File: ./tests_output/bst_flag/insertion.png Graphic file (type png)
+<use ./tests_output/bst_flag/insertion.png>
+Package pdftex.def Info: ./tests_output/bst_flag/insertion.png  used on input l
+ine 503.
+(pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
+<./tests_output/bst_flag/insertion_iterations.png, id=64, 462.528pt x 346.896pt
+>
+File: ./tests_output/bst_flag/insertion_iterations.png Graphic file (type png)
+<use ./tests_output/bst_flag/insertion_iterations.png>
+Package pdftex.def Info: ./tests_output/bst_flag/insertion_iterations.png  used
+ on input line 509.
+(pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
+
+Overfull \hbox (2.22168pt too wide) in paragraph at lines 501--513
+[]$[]$ $[]$ 
+ []
+
+[8 <./tests_output/bst/insertion.png> <./tests_output/bst/insertion_iterations.
+png>]
+<./tests_output/bst_list/insertion.png, id=70, 462.528pt x 346.896pt>
+File: ./tests_output/bst_list/insertion.png Graphic file (type png)
+<use ./tests_output/bst_list/insertion.png>
+Package pdftex.def Info: ./tests_output/bst_list/insertion.png  used on input l
+ine 526.
+(pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
+<./tests_output/bst_list/insertion_iterations.png, id=71, 462.528pt x 346.896pt
+>
+File: ./tests_output/bst_list/insertion_iterations.png Graphic file (type png)
+<use ./tests_output/bst_list/insertion_iterations.png>
+Package pdftex.def Info: ./tests_output/bst_list/insertion_iterations.png  used
+ on input line 532.
+(pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
+
+Overfull \hbox (2.22168pt too wide) in paragraph at lines 524--536
+[]$[]$ $[]$ 
+ []
+
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 540--563
+[][] 
+ []
+
+<./tests_output/comparison_insertion.png, id=72, 462.528pt x 346.896pt>
+File: ./tests_output/comparison_insertion.png Graphic file (type png)
+<use ./tests_output/comparison_insertion.png>
+Package pdftex.def Info: ./tests_output/comparison_insertion.png  used on input
+ line 569.
+(pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
+<./tests_output/comparison_insertion_zommed.png, id=73, 462.528pt x 346.896pt>
+File: ./tests_output/comparison_insertion_zommed.png Graphic file (type png)
+<use ./tests_output/comparison_insertion_zommed.png>
+Package pdftex.def Info: ./tests_output/comparison_insertion_zommed.png  used o
+n input line 575.
+(pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
+
+Overfull \hbox (2.22168pt too wide) in paragraph at lines 567--579
+[]$[]$ $[]$ 
+ []
+
+[9 <./tests_output/bst_flag/insertion.png> <./tests_output/bst_flag/insertion_i
+terations.png> <./tests_output/bst_list/insertion.png> <./tests_output/bst_list
+/insertion_iterations.png>] [10 <./tests_output/comparison_insertion.png> <./te
+sts_output/comparison_insertion_zommed.png>] [11] (./relazione.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'relazione.run.xml'.
 \openout1 = `relazione.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28225 strings out of 476025
- 558173 string characters out of 5790017
+ 28877 strings out of 476025
+ 576785 string characters out of 5790017
  1895388 words of memory out of 5000000
- 48307 multiletter control sequences out of 15000+600000
+ 48935 multiletter control sequences out of 15000+600000
  522738 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,12n,89p,682b,1993s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,12n,89p,1072b,1989s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
@@ -1068,10 +1210,10 @@ al/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local
 /texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/t
 exlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/tex
 live/2023/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on relazione.pdf (10 pages, 497388 bytes).
+Output written on relazione.pdf (12 pages, 659468 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 142 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

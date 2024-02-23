@@ -5,11 +5,12 @@
 \contentsline {subsection}{\numberline {2.1}Cos'è un albero binario di Ricerca?}{2}{}%
 \contentsline {subsection}{\numberline {2.2}Implementazione in Python}{3}{}%
 \contentsline {section}{\numberline {3}Il Problema delle Chiavi Duplicate}{4}{}%
-\contentsline {subsection}{\numberline {3.1}Implementazione "normale"}{4}{}%
-\contentsline {subsection}{\numberline {3.2}Metodo del Falg Booleano}{6}{}%
-\contentsline {subsection}{\numberline {3.3}Metodo della Lista Concatenata}{7}{}%
+\contentsline {subsection}{\numberline {3.1}Premessa sulla ricerca}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Implementazione "normale"}{4}{}%
+\contentsline {subsection}{\numberline {3.3}Metodo del Falg Booleano}{6}{}%
+\contentsline {subsection}{\numberline {3.4}Metodo della Lista Concatenata}{7}{}%
 \contentsline {section}{\numberline {4}Test delle prestazioni}{8}{}%
 \contentsline {subsection}{\numberline {4.1}Analisi Teorica}{8}{}%
 \contentsline {subsection}{\numberline {4.2}Risultati Sperimentali}{8}{}%
-\contentsline {section}{Nota sulle Caratteristiche del Computer}{9}{}%
-\contentsline {section}{Bibliografia}{9}{}%
+\contentsline {section}{Nota sui test}{11}{}%
+\contentsline {section}{Bibliografia}{11}{}%

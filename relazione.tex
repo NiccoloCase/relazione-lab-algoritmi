@@ -16,6 +16,8 @@
 \usepackage{multicol} % molteplici colonne
 
 
+\usepackage{csvsimple} 
+
 % Formattare codice
 \usepackage{listings}
 \lstset{language=Python}
@@ -244,9 +246,15 @@ Possiamo trovare vari possibili approcci per gestire il problema, in questa rela
 \end{itemize}
 
 
+
+
+\subsection{Premessa sulla ricerca}\label{subsec:search-int}Nonostante i test eseguiti e la relazione si concentreranno  sull'inserimento, è comunque necessario fare una premessa su cosa intendiamo come ricerca in un Albero Binario di Ricerca con chiavi duplicate. A seconda del tipo di utilizzo che vogliamo dare a un BST possiamo infatti realizzare diversamente la ricerca. In alcuni testi la ricerca di un nodo è descritta come un metodo che restituisce semplicemente se è presente o meno una specifica chiave in un albero o, in alternativa, che restituisce il primo nodo con tale chiave. In questi due specifici casi non bisogna mettere in pratica nessuna modifica nella implementazione precedente, tuttavia ciò è molto limitante: sebbene per motivi didattici quando si tratta i BST si tende a semplificare considerando ogni nodo solo dalla sua chiave, nella realtà, ogni nodo contiene anche dati satelliti. Ne consegue che sebbene due nodi possano avere una stessa chiave, il loro valore può essere diverso.
+È il caso ad esempio dei dizionari; se in Javascript e Python non sono supportate le chiavi duplicate nei dizionari (oggetti in Javascript), un esempio valido sono invece le \textit{multimap} del c++ le quali, data una chiave, restituiscono tutti i valori associati a tale chiave. Questo è l'approccio seguito in questa relazione. 
+ 
+
  
 \subsection{Implementazione "normale"}\label{subsec:normal-implementation}
-Un primo possibile approccio, e senza dubbi il più immediato, è quello di aggiustare la definizione, volutamente ambigua nel caso di chiavi duplicate, fornita precedentemente (vedi proprietà \ref{prop:bst-prop}).\\
+Un primo possibile approccio alla questione delle chiavi duplicate, e senza dubbi quello più immediato, è semplicemente aggiustare la definizione, volutamente ambigua, fornita precedentemente (vedi proprietà \ref{prop:bst-prop}).\\
 Possiamo quindi riformulare la relazione tra i nodi di un BST affinché supporti l'inserimento quando la chiave da inserire è già presente nell'albero:
 
 \begin{center}
@@ -440,18 +448,133 @@ Infine per quanto riguarda l'inserimento con l'approccio tramite lista concatena
 Tuttavia, nel caso del test di inserimento di n chiavi uguali l'albero degenera in un singolo nodo (Vedi Figura \ref{fig:bst-list-img2}) e quindi la complessità risultante diventa $\Theta(1) + \Theta(1) = \Theta(1)$.
 
 
-
-
-
 \subsection{Risultati Sperimentali}
 
 
 
 
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{./tests_output/bst/insertion.png}
+    \caption{Prestazioni di inserimento di 200.000 chiavi identiche un BST senza accorgimenti}
+    \label{fig:bst-normal-insetion}
+  \end{minipage}
+  \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{./tests_output/bst/insertion_iterations.png}
+    \caption{BST con chiavi duplicate}
+    \label{fig:bst-normal-insetion-iterations}
+  \end{minipage}%
+\end{figure}
 
 
 
 
+\begin{minipage}[t]{\linewidth}
+\begin{multicols}{2}
+\begin{minipage}{\linewidth}
+    \centering
+    \csvautotabular{./tests_output/bst/insertion_summarised.cvs} % Percorso corretto per la prima tabella
+    \captionof{table}{Inserimento in un BST con Flag Booleano}
+    \label{tab:bst-flag-insertion-summarised}
+\end{minipage}
+\columnbreak
+\begin{minipage}{\linewidth}
+    \centering
+    \csvautotabular{./tests_output/bst/insertion_iterations_summarised.cvs} % Percorso corretto per la seconda tabella
+    \captionof{table}{Inserimento in un BST con Lista Concatenata}
+    \label{tab:bst-list-insertion-summarised}
+\end{minipage}
+
+\end{multicols}
+
+\end{minipage}
+
+
+
+
+
+
+
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{./tests_output/bst_flag/insertion.png}
+    \caption{Prestazioni di inserimento di 200.000 chiavi identiche un BST senza accorgimenti}
+    \label{fig:bst-normal-insetion}
+  \end{minipage}
+  \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{./tests_output/bst_flag/insertion_iterations.png}
+    \caption{BST con chiavi duplicate}
+    \label{fig:bst-normal-insetion-iterations}
+  \end{minipage}%
+\end{figure}
+
+
+
+
+
+
+
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{./tests_output/bst_list/insertion.png}
+    \caption{Prestazioni di inserimento di 200.000 chiavi identiche un BST senza accorgimenti}
+    \label{fig:bst-normal-insetion}
+  \end{minipage}
+  \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{./tests_output/bst_list/insertion_iterations.png}
+    \caption{BST con chiavi duplicate}
+    \label{fig:bst-normal-insetion-iterations}
+  \end{minipage}%
+\end{figure}
+
+
+
+\begin{minipage}[t]{\linewidth}
+
+\begin{multicols}{2}
+
+\begin{minipage}{\linewidth}
+    \centering
+    \csvautotabular{./tests_output/bst_flag/insertion_summarised.cvs} % Percorso corretto per la prima tabella
+    \captionof{table}{Inserimento in un BST con Flag Booleano}
+    \label{tab:bst-flag-insertion-summarised}
+\end{minipage}
+
+\columnbreak
+
+\begin{minipage}{\linewidth}
+    \centering
+    \csvautotabular{./tests_output/bst_list/insertion_summarised.cvs} % Percorso corretto per la seconda tabella
+    \captionof{table}{Inserimento in un BST con Lista Concatenata}
+    \label{tab:bst-list-insertion-summarised}
+\end{minipage}
+
+\end{multicols}
+
+\end{minipage}
+
+
+
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{./tests_output/comparison_insertion.png}
+    \caption{Altro esempio di BST con chiavi duplicate}
+    \label{fig:comparison_insertion}
+  \end{minipage}
+  \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{./tests_output/comparison_insertion_zommed.png}
+    \caption{BST con chiavi duplicate}
+    \label{fig:comparison_insertion_zommed}
+  \end{minipage}%
+\end{figure}
 
 
 
@@ -459,7 +582,7 @@ Tuttavia, nel caso del test di inserimento di n chiavi uguali l'albero degenera 
 
 % PC 
 \section*{Nota sui test}
-\addcontentsline{toc}{section}{Nota sulle Caratteristiche del Computer}
+\addcontentsline{toc}{section}{Nota sui test}
 
 
 Si tenga presente svolgere i test discussi è necessario alzare il limite massimo di ricorsione di default di Python. Questo è necessario per prevenire che l'interprete blocchi l'esecuzione di un elevato numero di chiamate ricorsive, però necessarie in questa tipologia di test.
