@@ -14,7 +14,7 @@
 \usepackage{float} % Per utilizzare l'opzione H nelle immagini
 \usepackage{caption}
 \usepackage{multicol} % molteplici colonne
-
+\usepackage{todonotes}  % note
 
 \usepackage{csvsimple} 
 
@@ -450,24 +450,27 @@ Tuttavia, nel caso del test di inserimento di n chiavi uguali l'albero degenera 
 
 \subsection{Risultati Sperimentali}
 
+Come già detto il test eseguito consiste nell'inserire N (numero molto grande) volte la stessa medesima chiave in un albero binario di ricerca per comprendere in questo \underline{caso estremo} le differenze tra le tre implementazioni.
 
+Il primo approccio, come si ipotizzato nel paragrafo precedente, si è rilevato il più dispendioso di risorse computazionali e di tempo. Infatti, se ii grafici generarti per gli altri due casi arrivano fino all'inserimento in Alberi Binari di Ricerca di fino \underline{un milione} di elementi, nel caso dell'implementazione classica del BST il test è stato eseguito fino a un albero di \underline{200-mila elementi}. Come apprezzabile dal grafico riportato, il costo di questa operazione segue un andamento lineare e già i vari test fino a 200.000 chiavi hanno impiegato sul mio calcolatori (Vedi la nota sui test) più di mezz'ora di esecuzione. I test su N nell'ordine dei milioni, che ho più volte tentato, era semplificante non praticabile, e a mio avviso nemmeno significativo. Per i test è stata inoltre apportata una modifica alla classe Albero per tenere traccia del numero di iterazioni (in realtà se si vuole essere precisi, ricorsioni) che sono state necessarie per l'inserimento di ogni valore in un albero di dimensione n. Ad ogni dimensione dell'albero, quindi, sono stati salvati i tempi di esecuzione e il numero di iterazioni impiegati in un dizionario, ovvero un hash table di Python, utilizzando il valore corrente di n come chiave.
+A conferma dell'andamento lineare dell'inserimento con il primo approccio è quindi anche il grafico del numero di interazioni e, sopratutto, la tabella (\ref{tab:bst-insertion-summarised}) che ci mostra chiaramente l'identità tra il numero di elementi dell'albero e il numero di interazioni necessarie per l'inserimento (questo ovviamente perché necessario scorrere tutto l'albero degenerato in una lista concatenata).
 
 
 \begin{figure}[htbp]
  \begin{minipage}{0.5\textwidth}
     \centering
     \includegraphics[width=\linewidth]{./tests_output/bst/insertion.png}
-    \caption{Prestazioni di inserimento di 200.000 chiavi identiche un BST senza accorgimenti}
+    \caption{Prestazioni di inserimento di 200.000 chiavi identiche un BST senza accorgimenti particolari}
     \label{fig:bst-normal-insetion}
   \end{minipage}
+    \hspace{0.05\textwidth}
   \begin{minipage}{0.5\textwidth}
     \centering
     \includegraphics[width=\linewidth]{./tests_output/bst/insertion_iterations.png}
-    \caption{BST con chiavi duplicate}
+    \caption{Variazione del numero di iterazioni per l'inserimento in un BST di 200.000 chiavi identiche}
     \label{fig:bst-normal-insetion-iterations}
   \end{minipage}%
 \end{figure}
-
 
 
 
@@ -476,69 +479,74 @@ Tuttavia, nel caso del test di inserimento di n chiavi uguali l'albero degenera 
 \begin{minipage}{\linewidth}
     \centering
     \csvautotabular{./tests_output/bst/insertion_summarised.cvs} % Percorso corretto per la prima tabella
-    \captionof{table}{Inserimento in un BST con Flag Booleano}
-    \label{tab:bst-flag-insertion-summarised}
+    \captionof{table}{Risultati dell'inserimento in un BST normale}
+    \label{tab:bst-insertion-summarised}
 \end{minipage}
 \columnbreak
 \begin{minipage}{\linewidth}
     \centering
     \csvautotabular{./tests_output/bst/insertion_iterations_summarised.cvs} % Percorso corretto per la seconda tabella
-    \captionof{table}{Inserimento in un BST con Lista Concatenata}
-    \label{tab:bst-list-insertion-summarised}
+    \captionof{table}{Numero di iterazioni nell'inserimento in un BST normale}
+    \label{tab:bst-insertion-summarised}
 \end{minipage}
-
 \end{multicols}
-
 \end{minipage}
+\vspace{15px}
 
 
 
+    \todo[inline, size=\small, backgroundcolor=gray!20, linecolor=gray, caption={\textit{}}]{\textbf{Nota sulle tabelle}. I test sono stati eseguiti su alberi di dimensioni fino a un milione di elementi e sono stati salatavi i risultati in file \textit{.xlsx} da migliaia di righe. Ne consegue che, per ovvi motivi, questi file sono stati successivamente abbreviati selezionando solo le misurazioni più significative da un altro script Python.}
 
+\vspace{15px}
 
+L'approccio del Flag Booleano da un punto di vista teorico dovrebbe dimostrarsi caratterizzato da una complessità logaritmica, tuttavia in questo caso diventa già molto più difficile interpretare il grafico.
+Infatti, quando si parla di logaritmo spesso si tende a sottostimare quando questa funzione cresci lentamente: nel caso di   10.000 elementi sono necessarie solo 13 iterazioni per arrivare in fondo all'albero e inserire un nuovo valore; con un milione di elementi si sale ad appena a 19 iterazioni. Risulta evidente che per un calcolatore moderno la differenza, ad esempio, tra 13 o 19 iterazioni (e quindi di fatto confronti) è praticamente impercettibile e quindi il grafico risulta quasi costante e indistinguibile con quello del \textit{BST LIST}.
+I test sono stati eseguiti su 1 milione di elementi e hanno impiegato un tempo quasi insignificante. Tuttavia, cercando di aumentare il numero di elementi ho riscontrato dei problemi con il terminale e l'editor di testo che sono andati in crash. Suppongo però, mettendo le mani aventi poiché non ne posso avere la certezza, che questo sia un problema specifico dell'IDE, o della gestione del sistema o di Python delle chiamate ricorsive.
 
+Nonostante tutto ciò, dopo aver messo in atto accorgimenti alla visualizzazione del grafico e zoomando nella sezione di interesse, è possibile scorgere l'andamento logaritmico, anche se con molto rumore (dovuto probabilmente ad altri processi del calcolatore e in generale all'aleatorietà di tale tipo di test quando si va a considerare intervalli di tempo così ridotti).
+Questo risulta ancora pià evidente se si prende in considerazione il grafico delle iterazioni di inserimento.
 
 \begin{figure}[htbp]
  \begin{minipage}{0.5\textwidth}
     \centering
     \includegraphics[width=\linewidth]{./tests_output/bst_flag/insertion.png}
-    \caption{Prestazioni di inserimento di 200.000 chiavi identiche un BST senza accorgimenti}
-    \label{fig:bst-normal-insetion}
+    \caption{Prestazioni di inserimento di 1.000.000 chiavi identiche un BST con Flag booleano}
+    \label{fig:bst-flag-insetion}
   \end{minipage}
+      \hspace{0.05\textwidth}
   \begin{minipage}{0.5\textwidth}
     \centering
     \includegraphics[width=\linewidth]{./tests_output/bst_flag/insertion_iterations.png}
-    \caption{BST con chiavi duplicate}
-    \label{fig:bst-normal-insetion-iterations}
+    \caption{Iterazioni nell'inserimento di 1.000.000 chiavi identiche un BST con Flag booleano}
+    \label{fig:bst-flag-insetion-iterations}
   \end{minipage}%
 \end{figure}
 
-
-
-
-
+\vspace{10px}
+L'approccio della Lista Concatenata deve avere come grafico un andamento costante, e così è. Nuovamente, risulta tuttavia di non immediata interpretazione: infatti, se rappresentiamo il grafico concentrandosi sulla zona d interesse, come nel caso di \cref{fig:bst-list-insetion}, essendo che in questo caso l'operazione di inserimento è molto veloce e poco dispendiosa di risorse, si ha che la variabile di incertezza/casualità influenza maggiormente il risultato.
+Ecco perché il grafico in \cref{fig:bst-list-insetion} non risulta perfettamente come costante, ma i valori dei test si distribuiscono quasi uniformemente tra un range di valori. È inoltre fondamentale notare come la scala verticale dei grafici di   \cref{fig:bst-list-insetion} e  \cref{fig:bst-flag-insetion} sia dversa; rispettivamente dell'ordine di 10e-6 per la prima e 10e-7 per la seconda, che quindi risulta più "zoomata". Analizzando le Tabelle \ref{tab:bst-flag-insertion-summarised} e \ref{tab:bst-list-insertion-summarised} emerge subito come l'ultimo approccio abbia prestazioni effettivamente quasi costanti e, sopratutto, di un ordine di grandezza 10 volte più piccolo dell'implementazione con Flag Booleano.
 
 
 \begin{figure}[htbp]
  \begin{minipage}{0.5\textwidth}
     \centering
     \includegraphics[width=\linewidth]{./tests_output/bst_list/insertion.png}
-    \caption{Prestazioni di inserimento di 200.000 chiavi identiche un BST senza accorgimenti}
-    \label{fig:bst-normal-insetion}
+    \caption{Prestazioni di inserimento di 1.000.000 chiavi identiche un BST con Lista Concatenata}
+    \label{fig:bst-list-insetion}
   \end{minipage}
+      \hspace{0.05\textwidth}
   \begin{minipage}{0.5\textwidth}
     \centering
     \includegraphics[width=\linewidth]{./tests_output/bst_list/insertion_iterations.png}
-    \caption{BST con chiavi duplicate}
-    \label{fig:bst-normal-insetion-iterations}
+    \caption{Iterazioni nell'inserimento di 1.000.000 chiavi identiche un BST con Lista concatenata}
+    \label{fig:bst-list-insetion-iterations}
   \end{minipage}%
 \end{figure}
 
 
 
 \begin{minipage}[t]{\linewidth}
-
 \begin{multicols}{2}
-
 \begin{minipage}{\linewidth}
     \centering
     \csvautotabular{./tests_output/bst_flag/insertion_summarised.cvs} % Percorso corretto per la prima tabella
@@ -559,19 +567,23 @@ Tuttavia, nel caso del test di inserimento di n chiavi uguali l'albero degenera 
 
 \end{minipage}
 
+\vspace{10px}
 
+Vediamo infine ciò che è veramente significativo: la visualizzazione del confronto diretto tra i 3 approcci.
+Risulta subito evidente come entrambi gli approcci della lista concatenata e del flag booleano, nonostante magari la necessità di una iniziale progettazione e implementazione più specifica, portano enormi benefici. Entrambi i grafici di  {\cref{fig:comparison_insertion}} e {\cref{fig:comparison_insertion_zommed}} sono stati realizzati sulla base degli stessi dati già mostrati; il secondo è però più zoomato sull'asse delle y  così che si possano apprezzare anche le misurazioni di \textit{BST FLAG} e \textit{BST LIST}, prticamente impercettibile nella figura {\cref{fig:comparison_insertion}} dominata dal grafico del primo approccio.
 
 \begin{figure}[htbp]
  \begin{minipage}{0.5\textwidth}
     \centering
     \includegraphics[width=\linewidth]{./tests_output/comparison_insertion.png}
-    \caption{Altro esempio di BST con chiavi duplicate}
+    \caption{Confronto tra le prestazioni di inserimento dei 3 tipi di BST}
     \label{fig:comparison_insertion}
   \end{minipage}
+      \hspace{0.05\textwidth}
   \begin{minipage}{0.5\textwidth}
     \centering
     \includegraphics[width=\linewidth]{./tests_output/comparison_insertion_zommed.png}
-    \caption{BST con chiavi duplicate}
+    \caption{Zoom del confronto tra le prestazioni di inserimento dei 3 tipi di BST}
     \label{fig:comparison_insertion_zommed}
   \end{minipage}%
 \end{figure}
@@ -583,7 +595,6 @@ Tuttavia, nel caso del test di inserimento di n chiavi uguali l'albero degenera 
 % PC 
 \section*{Nota sui test}
 \addcontentsline{toc}{section}{Nota sui test}
-
 
 Si tenga presente svolgere i test discussi è necessario alzare il limite massimo di ricorsione di default di Python. Questo è necessario per prevenire che l'interprete blocchi l'esecuzione di un elevato numero di chiamate ricorsive, però necessarie in questa tipologia di test.
 Per fare ciò basta impostare un nuovo limite nel seguente modo:
