@@ -1,16 +1,18 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
 \contentsline {section}{\numberline {1}Introduzione}{2}{}%
-\contentsline {section}{\numberline {2}Cenni sugli Alberi Binari di Ricerca}{2}{}%
-\contentsline {subsection}{\numberline {2.1}Cos'è un albero binario di Ricerca?}{2}{}%
+\contentsline {section}{\numberline {2}Nozioni sugli Alberi Binari di Ricerca}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Cos'è un Albero Binario di Ricerca?}{2}{}%
 \contentsline {subsection}{\numberline {2.2}Implementazione in Python}{3}{}%
 \contentsline {section}{\numberline {3}Il Problema delle Chiavi Duplicate}{4}{}%
 \contentsline {subsection}{\numberline {3.1}Premessa sulla ricerca}{4}{}%
-\contentsline {subsection}{\numberline {3.2}Implementazione "normale"}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Implementazione "normale"}{5}{}%
 \contentsline {subsection}{\numberline {3.3}Metodo del Falg Booleano}{6}{}%
-\contentsline {subsection}{\numberline {3.4}Metodo della Lista Concatenata}{7}{}%
+\contentsline {subsection}{\numberline {3.4}Metodo della Lista Concatenata}{8}{}%
 \contentsline {section}{\numberline {4}Test delle prestazioni}{8}{}%
-\contentsline {subsection}{\numberline {4.1}Analisi Teorica}{8}{}%
-\contentsline {subsection}{\numberline {4.2}Risultati Sperimentali}{8}{}%
-\contentsline {section}{Nota sui test}{12}{}%
-\contentsline {section}{Bibliografia}{12}{}%
+\contentsline {subsection}{\numberline {4.1}Analisi Teorica}{9}{}%
+\contentsline {subsection}{\numberline {4.2}Risultati Sperimentali}{9}{}%
+\contentsline {subsection}{\numberline {4.3}Cenni sulla cancellazione}{13}{}%
+\contentsline {section}{\numberline {5}Conclusioni}{13}{}%
+\contentsline {section}{Nota sui test}{14}{}%
+\contentsline {section}{Bibliografia}{14}{}%
