@@ -301,6 +301,35 @@ Questa modifica comporta quindi un cambiamento dell'implementazione dell'operazi
                 currentNode.right = Node(key)
 \end{lstlisting}
 
+
+
+\begin{figure}[htbp]
+  \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{./images/BST_UML}
+    \caption{UML delle classi del BST}
+    \label{fig:bst-normal-img1}
+  \end{minipage}%
+    \hspace{\columnsep}
+      \hspace{\columnsep}
+  \begin{minipage}{0.5\textwidth}
+Ecco il diagramma delle classi per questa implementazione di Albero Binario. Come possibile vedere, ho deciso di implementare anche metodi di supporto e operazioni aggiuntive di cui non ho riportato il codice per motivi riassuntivi.
+Stesso discorso per gli attributi, ho voluto aggiungere due variabili di supporto, \textit{find\_iterations\_count} e    \textit{insert\_iterations\_count}, per tenere traccia del numero i ricorsioni durante le operazioni, ovviamente solo al fine degli esperimenti.
+  \end{minipage}
+\end{figure}
+
+
+
+
+In \cref{fig:bst-normal-img1} possiamo vedere l'albero derivante dall'inserimento ordinato dei seguenti elementi \(\mathbf{\{3, 1, 2, 2, 2, 4\}}\). Notiamo quindi che vi sono tre nodi con la stessa chiave 2, ognuno dei quali è nel sotto-albero sinistro del nodo padre con la medesima chiave.
+\\
+Non bisogna però cadere nella convinzione che nodi con stessa chiave si trovino sempre tutti adiacenti l'uno con l'altro.
+A questo scopo si consideri la \cref{fig:bst-normal-img2}:  cambiando semplicemente l'ordine di inserimento dei valori della figura precedente (ora \(\mathbf{\{3, 2, 2, 1, 2, 4\}}\)) il risultato è molto diverso; tra il penultimo e l'ultimo nodo con chiave 2 vi è in mezzo un nodo con chiave 1!
+Questo può portare a complicazioni nella ricerca.
+Eviterò di mostrare anche il codice della ricerca, disponibile nel progetto allegato, ma questo dovrò essere un estensione del metodo già mostrato (Vedi codice \ref{lst:bst-search}); la differenza risiede nel fatto che, una volta trovata una chiave, bisogna rilanciare ricorsivamente sul ramo sinistro la medesima funzione. Infatti, come appena fatto notare dalla \cref{fig:bst-normal-img2} non siamo sicuri di aver trovato tutte le chiavi finché non arriviamo a una foglia. Creiamo quindi un array inizialmente vuoto e locale al metodo per poi passarlo come argomento alla funzione ausiliaria ricorsiva: una volta trovata una chiave duplicata verrà quindi messa nell'array. 
+Il principale svantaggio di questa implementazione è che l'inserimento di tante chiavi uguali può tendere a sbilanciare l'albero il quale finisce per degenerare in una semplice lista. Infatti, è evidente che per creare l'albero di N elementi più sbilanciato possibile sia sufficiente inserire N volte la stessa chiave. Come in esempio (\cref{fig:bst-normal-img3}).
+
+
 \begin{figure}[htbp]
   \begin{minipage}{0.5\textwidth}
     \centering
@@ -317,14 +346,6 @@ Questa modifica comporta quindi un cambiamento dell'implementazione dell'operazi
 \end{figure}
 
 
-
-Nella \cref{fig:bst-normal-img1} possiamo vedere l'albero derivante dall'inserimento ordinato dei seguenti elementi \(\mathbf{\{3, 1, 2, 2, 2, 4\}}\). Notiamo quindi che vi sono tre nodi con la stessa chiave 2, ognuno dei quali è nel sotto-albero sinistro del nodo padre con la medesima chiave.
-\\
-Non bisogna però cadere nella convinzione che nodi con stessa chiave si trovino sempre tutti adiacenti l'uno con l'altro.
-A questo scopo si consideri la \cref{fig:bst-normal-img2}:  cambiando semplicemente l'ordine di inserimento dei valori della figura precedente (ora \(\mathbf{\{3, 2, 2, 1, 2, 4\}}\)) il risultato è molto diverso; tra il penultimo e l'ultimo nodo con chiave 2 vi è in mezzo un nodo con chiave 1!
-Questo può portare a complicazioni nella ricerca.
-Eviterò di mostrare anche il codice della ricerca, disponibile nel progetto allegato, ma questo dovrò essere un estensione del metodo già mostrato (Vedi codice \ref{lst:bst-search}); la differenza risiede nel fatto che, una volta trovata una chiave, bisogna rilanciare ricorsivamente sul ramo sinistro la medesima funzione. Infatti, come appena fatto notare dalla \cref{fig:bst-normal-img2} non siamo sicuri di aver trovato tutte le chiavi finché non arriviamo a una foglia. Creiamo quindi un array inizialmente vuoto e locale al metodo per poi passarlo come argomento alla funzione ausiliaria ricorsiva: una volta trovata una chiave duplicata verrà quindi messa nell'array. 
-Il principale svantaggio di questa implementazione è che l'inserimento di tante chiavi uguali può tendere a sbilanciare l'albero il quale finisce per degenerare in una semplice lista. Infatti, è evidente che per creare l'albero di N elementi più sbilanciato possibile sia sufficiente inserire N volte la stessa chiave. Come in esempio (\cref{fig:bst-normal-img3}).
 
 
 \begin{figure}[H]
@@ -393,25 +414,23 @@ E aggiorniamo la funzione di supporto per l'inserimento:
 
 La ricerca, invece si complica leggermente: come nel caso precedente se si trova un valore con chiave uguale si prosegue la ricerca, ma mentre nell'implementazione "normale" è sufficiente richiamare la ricorsione nel nodo a sinistra, in questo caso non abbiamo la certezza che i nodi con stessa chiave inseriti successivamente siano stati collocati a sinistra o a destra. Dobbiamo quindi proseguire la ricerca sia nel sotto-albero destro, sia nel sotto-albero sinistro.
 
+\begin{figure}[htbp]
+  \begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{./images/BST_FLAG_UML}
+    \caption{UML delle classi per BST con Flag Booleano}
+    \label{fig:BST_FLAG_UML}
+  \end{minipage}%
+    \hspace{\columnsep}
+      \hspace{\columnsep}
+  \begin{minipage}{0.5\textwidth}
+	Come evidente nel diagramma UML, ho deciso di implementare le modifiche sui nodi dell'albero estendendo la classe Nodo tramite ereditarietà. Avrei potuto fare la stessa cosa anche con la classe Albero, ma ho preferito evitare il polimorfismo di Python, non molto utilizzato.
+  \end{minipage}
+\end{figure}
+
 
 \subsection{Metodo della Lista Concatenata}
 \label{subsec:list-implementation}
-
-\begin{figure}[htbp]
-  \begin{minipage}{0.48\textwidth}  % Riduci la larghezza della prima minipage
-    \centering
-    \includegraphics[width=\linewidth]{./images/bst-list-img1}
-    \caption{BST con gestione chiavi duplicate tramite lista concatenata}
-    \label{fig:bst-list-img1}
-  \end{minipage}%
-  \hfill  % Aggiungi uno spazio orizzontale tra le due colonne
-  \begin{minipage}{0.48\textwidth}  % Riduci la larghezza della seconda minipage
-    \centering
-    \includegraphics[width=\linewidth]{./images/bst-list-img2}
-    \caption{BST con lista concatenata di 100 chiavi uguali}
-    \label{fig:bst-list-img2}
-  \end{minipage}
-\end{figure}
 
 
 
@@ -439,14 +458,43 @@ A questo punto, in fase di inserimento, se si trova un nodo con stessa chiave gi
 
 \end{lstlisting}
 
-\vspace{20px}
+\vspace{15px}
 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{./images/BST_LIST_UML}
+    \caption{UML delle classi per BST con Lista Concatenata}
+  \label{fig:BST_LIST_UML}
+\end{figure}
+
+\vspace{15px}
 
 Apportando una semplice modifica alla funzione \textit{plot\_tree} (Vedi codice~\ref{lst:plot_tree}) possiamo visualizzare questo approccio in Figura \ref{fig:bst-list-img1} e Figura \ref{fig:bst-list-img2}.
 Per ogni nodo è segnato tra parentesi il numero di occorrenze di quella chiave.
 
 Per quanto concerne la ricerca, in questo approccio essa si semplifica notevolmente:
 una volta trovato il primo nodo con la chiave voluta tramite il metodo esposto nel Codice \ref{lst:bst-search} sarà sufficiente scorrere la lista concatenata per avere tutti gli altri nodi con la medesima chiave.
+
+
+\begin{figure}[htbp]
+    \centering
+  \begin{minipage}{0.48\textwidth}  % Riduci la larghezza della prima minipage
+    \centering
+    \includegraphics[width=\linewidth]{./images/bst-list-img1}
+    \caption{BST con gestione chiavi duplicate tramite lista concatenata}
+    \label{fig:bst-list-img1}
+  \end{minipage}%
+  \hfill  % Aggiungi uno spazio orizzontale tra le due colonne
+  \begin{minipage}{0.48\textwidth}  % Riduci la larghezza della seconda minipage
+    \centering
+    \includegraphics[width=\linewidth]{./images/bst-list-img2}
+    \caption{BST con lista concatenata di 100 chiavi uguali}
+    \label{fig:bst-list-img2}
+  \end{minipage}
+\end{figure}
+
+
 
 
 \section{Test delle prestazioni}

@@ -7,12 +7,12 @@
 \contentsline {section}{\numberline {3}Il Problema delle Chiavi Duplicate}{4}{}%
 \contentsline {subsection}{\numberline {3.1}Premessa sulla ricerca}{4}{}%
 \contentsline {subsection}{\numberline {3.2}Implementazione "normale"}{5}{}%
-\contentsline {subsection}{\numberline {3.3}Metodo del Falg Booleano}{6}{}%
+\contentsline {subsection}{\numberline {3.3}Metodo del Falg Booleano}{7}{}%
 \contentsline {subsection}{\numberline {3.4}Metodo della Lista Concatenata}{8}{}%
-\contentsline {section}{\numberline {4}Test delle prestazioni}{8}{}%
-\contentsline {subsection}{\numberline {4.1}Analisi Teorica}{9}{}%
-\contentsline {subsection}{\numberline {4.2}Risultati Sperimentali}{9}{}%
-\contentsline {subsection}{\numberline {4.3}Cenni sulla cancellazione}{13}{}%
-\contentsline {section}{\numberline {5}Conclusioni}{13}{}%
-\contentsline {section}{Nota sui test}{14}{}%
-\contentsline {section}{Bibliografia}{14}{}%
+\contentsline {section}{\numberline {4}Test delle prestazioni}{10}{}%
+\contentsline {subsection}{\numberline {4.1}Analisi Teorica}{10}{}%
+\contentsline {subsection}{\numberline {4.2}Risultati Sperimentali}{10}{}%
+\contentsline {subsection}{\numberline {4.3}Cenni sulla cancellazione}{14}{}%
+\contentsline {section}{\numberline {5}Conclusioni}{14}{}%
+\contentsline {section}{Nota sui test}{15}{}%
+\contentsline {section}{Bibliografia}{15}{}%
