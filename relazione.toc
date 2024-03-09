@@ -9,8 +9,8 @@
 \contentsline {subsection}{\numberline {3.2}Implementazione "normale"}{5}{}%
 \contentsline {subsection}{\numberline {3.3}Metodo del Falg Booleano}{7}{}%
 \contentsline {subsection}{\numberline {3.4}Metodo della Lista Concatenata}{8}{}%
-\contentsline {section}{\numberline {4}Test delle prestazioni}{10}{}%
-\contentsline {subsection}{\numberline {4.1}Analisi Teorica}{10}{}%
+\contentsline {section}{\numberline {4}Test delle prestazioni}{9}{}%
+\contentsline {subsection}{\numberline {4.1}Analisi Teorica}{9}{}%
 \contentsline {subsection}{\numberline {4.2}Risultati Sperimentali}{10}{}%
 \contentsline {subsection}{\numberline {4.3}Cenni sulla cancellazione}{14}{}%
 \contentsline {section}{\numberline {5}Conclusioni}{14}{}%

@@ -158,11 +158,12 @@ Come già accennato, in informatica possiamo rappresentare un albero binario con
 
 
 class Node:
-    def __init__(self, key):
-        self.key = key
+    def __init__(self, key, parent=None):
+        self.key = key 
         self.left = None
         self.right = None
-
+        self.p = parent
+        
 class BST:
     def __init__(self):
         self.root = None
@@ -170,26 +171,26 @@ class BST:
     # Imposta la radice dell'albero
     def setRoot(self, key):
         self.root = Node(key)
-
+        
     # Inserisce un nodo nell'albero
     def insert(self, key):
         if (self.root is None):
             self.setRoot(key)
         else:
             self._insertNode(self.root, key)
-
+            
     # Funzione di supporto per l'inserimento di un nodo
     def _insertNode(self, currentNode, key):
         if (key < currentNode.key):
             if (currentNode.left):
                 self._insertNode(currentNode.left, key)
             else:
-                currentNode.left = Node(key)
+                currentNode.left = Node(key, currentNode)
         elif (key > currentNode.key):
             if (currentNode.right):
                 self._insertNode(currentNode.right, key)
             else:
-                currentNode.right = Node(key)
+                currentNode.right = Node(key, currentNode)
 \end{lstlisting}
 
 \vspace{5pt}
@@ -308,7 +309,7 @@ Questa modifica comporta quindi un cambiamento dell'implementazione dell'operazi
     \centering
     \includegraphics[width=\linewidth]{./images/BST_UML}
     \caption{UML delle classi del BST}
-    \label{fig:bst-normal-img1}
+    \label{fig:BST_UML}
   \end{minipage}%
     \hspace{\columnsep}
       \hspace{\columnsep}
@@ -376,24 +377,25 @@ Il punto di forza di questa implementazione è il fatto che tende a preservare i
 
 
 Per quanto riguarda il codice, le modifiche da apportare sono minime.
-Aggiungiamo il nuovo attributo nella classe Nodo:
+Aggiungiamo il nuovo attributo nella classe Nodo estendendola:
 
-\begin{lstlisting}[language=Python, caption={Classe nodo di un BST con Flag Booleano}]
-class Node:
-    def __init__(self, key):
-        self.key = key
-        self.left = None
-        self.right = None
-        self.flag = False # <---
+\begin{lstlisting}[language=Python, caption={Classe Nodo di un BST con Flag Booleano}]
+class NodeFlag(Node):
+    def __init__(self, key, parent=None):
+        super().__init__(key, parent)
+        self.flag = False
 \end{lstlisting}
 
 E aggiorniamo la funzione di supporto per l'inserimento:
 
 \begin{lstlisting}[language=Python]
-    def _insertNode(self, currentNode, key):        
+  def _insertNode(self, currentNode, key):
+        self.insert_iterations_count += 1
+        
         if(currentNode.key == key):
             if(currentNode.flag): self._insert_right(currentNode, key)
             else: self._insert_left(currentNode, key)
+
             currentNode.flag = not currentNode.flag # Alterna il flag
     
         if (key < currentNode.key): self._insert_left (currentNode, key)
@@ -402,12 +404,12 @@ E aggiorniamo la funzione di supporto per l'inserimento:
     # Funzione di supporto per l'inserimento di un nodo a sinistra
     def _insert_left(self, currentNode, key):
         if (currentNode.left): self._insertNode(currentNode.left, key)
-        else: currentNode.left = Node(key)
+        else: currentNode.left = NodeFlag(key, currentNode)
 
     # Funzione di supporto per l'inserimento di un nodo a destra
     def _insert_right(self, currentNode, key):
         if (currentNode.right): self._insertNode(currentNode.right, key)
-        else: currentNode.right = Node(key)
+        else: currentNode.right = NodeFlag(key, currentNode)
 \end{lstlisting}
 
 
@@ -438,21 +440,20 @@ L'ultimo approccio possibile trattato in questa relazione è quello  della lista
 Una possibile implementazione nel codice è di estendere la classe Nodo con un puntatore \textit{next} al prossimo elemento della lista concatenata. Nel mio caso ho aggiunto anche un campo   \textit{duplicates} che, nel primo nodo, tiene il conteggio dei nodi con chiave duplicata per esigenze rappresentative.
 
 \begin{lstlisting}[language=Python, caption={Classe Nodo di un BST con lista concatenata}]
-class Node:
-    def __init__(self, key):
-        self.key = key
-        self.left = None
-        self.right = None
-        self.next = None # <---
-        self.duplicates = 0 # <---
+class NodeList(Node):
+    def __init__(self, key, parent=None):
+        super().__init__(key, parent)
+        self.next = None
+        self.duplicates = 0
 \end{lstlisting}
 
-A questo punto, in fase di inserimento, se si trova un nodo con stessa chiave già esistente basta inserire il nuovo nodo.
+A questo punto, in fase di inserimento, se si trova un nodo con stessa chiave già esistente basta inserire il nuovo nodo in testa alla lista
 
 \begin{lstlisting}[language=Python, caption={Gestione chiavi duplicate con lista concatenata}]
-     if (key == currentNode.key):
-            newNode = Node(key)
+        if (key == currentNode.key):
+            newNode = NodeList(key, currentNode)
             newNode.next = currentNode.next
+            if(currentNode.next): currentNode.next.p = newNode
             currentNode.next = newNode
             currentNode.duplicates += 1
 
