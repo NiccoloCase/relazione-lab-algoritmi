@@ -327,7 +327,7 @@ In \cref{fig:bst-normal-img1} possiamo vedere l'albero derivante dall'inseriment
 Non bisogna però cadere nella convinzione che nodi con stessa chiave si trovino sempre tutti adiacenti l'uno con l'altro.
 A questo scopo si consideri la \cref{fig:bst-normal-img2}:  cambiando semplicemente l'ordine di inserimento dei valori della figura precedente (ora \(\mathbf{\{3, 2, 2, 1, 2, 4\}}\)) il risultato è molto diverso; tra il penultimo e l'ultimo nodo con chiave 2 vi è in mezzo un nodo con chiave 1!
 Questo può portare a complicazioni nella ricerca.
-Eviterò di mostrare anche il codice della ricerca, disponibile nel progetto allegato, ma questo dovrò essere un estensione del metodo già mostrato (Vedi codice \ref{lst:bst-search}); la differenza risiede nel fatto che, una volta trovata una chiave, bisogna rilanciare ricorsivamente sul ramo sinistro la medesima funzione. Infatti, come appena fatto notare dalla \cref{fig:bst-normal-img2} non siamo sicuri di aver trovato tutte le chiavi finché non arriviamo a una foglia. Creiamo quindi un array inizialmente vuoto e locale al metodo per poi passarlo come argomento alla funzione ausiliaria ricorsiva: una volta trovata una chiave duplicata verrà quindi messa nell'array. 
+Eviterò di mostrare anche il codice della ricerca, disponibile nel progetto allegato, ma questo dovrà essere un estensione del metodo già mostrato (Vedi codice \ref{lst:bst-search}); la differenza risiede nel fatto che, una volta trovata una chiave, bisogna rilanciare ricorsivamente sul ramo sinistro la medesima funzione. Infatti, come appena fatto notare dalla \cref{fig:bst-normal-img2} non siamo sicuri di aver trovato tutte le chiavi finché non arriviamo a una foglia. Creiamo quindi un array inizialmente vuoto e locale al metodo per poi passarlo come argomento alla funzione ausiliaria ricorsiva: una volta trovata una chiave duplicata verrà quindi messa nell'array. \\
 Il principale svantaggio di questa implementazione è che l'inserimento di tante chiavi uguali può tendere a sbilanciare l'albero il quale finisce per degenerare in una semplice lista. Infatti, è evidente che per creare l'albero di N elementi più sbilanciato possibile sia sufficiente inserire N volte la stessa chiave. Come in esempio (\cref{fig:bst-normal-img3}).
 
 
@@ -475,7 +475,7 @@ Apportando una semplice modifica alla funzione \textit{plot\_tree} (Vedi codice~
 Per ogni nodo è segnato tra parentesi il numero di occorrenze di quella chiave.
 
 Per quanto concerne la ricerca, in questo approccio essa si semplifica notevolmente:
-una volta trovato il primo nodo con la chiave voluta tramite il metodo esposto nel Codice \ref{lst:bst-search} sarà sufficiente scorrere la lista concatenata per avere tutti gli altri nodi con la medesima chiave.
+una volta trovato il primo nodo con la chiave voluta tramite il metodo esposto nel Codice \ref{lst:bst-search}, sarà sufficiente scorrere la lista concatenata per avere tutti gli altri nodi con la medesima chiave.
 
 
 \begin{figure}[htbp]
@@ -637,7 +637,7 @@ Ecco perché il grafico in \cref{fig:bst-list-insetion} non risulta perfettament
 \vspace{10px}
 
 Vediamo infine ciò che è veramente significativo: la visualizzazione del confronto diretto tra i 3 approcci.
-Risulta subito evidente come entrambi gli approcci della lista concatenata e del flag booleano, nonostante magari la necessità di una iniziale progettazione e implementazione più specifica, portano enormi benefici. Entrambi i grafici di  {\cref{fig:comparison_insertion}} e {\cref{fig:comparison_insertion_zommed}} sono stati realizzati sulla base degli stessi dati già mostrati; il secondo è però più zoomato sull'asse delle y  così che si possano apprezzare anche le misurazioni di \textit{BST FLAG} e \textit{BST LIST}, prticamente impercettibile nella figura {\cref{fig:comparison_insertion}} dominata dal grafico del primo approccio.
+Risulta subito evidente come entrambi gli approcci della lista concatenata e del flag booleano, nonostante magari la necessità di una iniziale progettazione e implementazione più specifica, portano enormi benefici. Entrambi i grafici di  {\cref{fig:comparison_insertion}} e {\cref{fig:comparison_insertion_zommed}} sono stati realizzati sulla base degli stessi dati già mostrati; il secondo è però più zoomato sull'asse delle y  così che si possano apprezzare anche le misurazioni di \textit{BST FLAG} e \textit{BST LIST}, praticamente impercettibile nella figura {\cref{fig:comparison_insertion}} dominata dal grafico del primo approccio.
 
 \begin{figure}[htbp]
  \begin{minipage}{0.5\textwidth}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.17)  9 MAR 2024 22:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.17)  12 MAR 2024 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -976,14 +976,7 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'italian'.
 
-(./relazione.aux
-
-LaTeX Warning: Label `fig:bst-normal-img1' multiply defined.
-
-
-LaTeX Warning: Label `fig:bst-normal-img1@cref' multiply defined.
-
-)
+(./relazione.aux)
 \openout1 = `relazione.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
@@ -1002,7 +995,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Info: Redefining \it@ocap on input line 83.
 LaTeX Info: Redefining \it@ccap on input line 83.
- (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count460
 \scratchdimen=\dimen286
@@ -1286,9 +1280,6 @@ Package pdftex.def Info: ./tests_output/bst_list/search.png  used on input line
 (pdftex.def)             Requested size: 154.78653pt x 116.09045pt.
  [14 <./tests_output/bst/search.png> <./tests_output/bst_flag/search.png> <./te
 sts_output/bst_list/search.png>] [15] (./relazione.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package logreq Info: Writing requests to 'relazione.run.xml'.
 \openout1 = `relazione.run.xml'.
 
@@ -1315,7 +1306,7 @@ live/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
 ve/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive
 /2023/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb></usr/local/texlive/2
 023/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on relazione.pdf (16 pages, 1027331 bytes).
+Output written on relazione.pdf (16 pages, 1027310 bytes).
 PDF statistics:
  179 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream
